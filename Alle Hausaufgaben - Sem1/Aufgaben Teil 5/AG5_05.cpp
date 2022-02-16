@@ -1,0 +1,48 @@
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <string.h>
+using namespace std;
+
+//-----------------------------------------------------
+typedef long long ll;
+typedef unsigned long long ull;
+typedef long double ld;
+const int oo = 1000000000;
+const long long N = 1000;
+
+void Init()
+{
+    int a[N], md[N], cnt = 0;
+    fill_n(md, 10, 0);
+    for (int i = 0, j = 0; i <= 8; ++i)
+    {
+        while (true)
+        {
+            cout << "Bitte geben Sie die " << i + 1 << ". Zahl ein: ? ";
+            cin >> a[i];
+            if (a[i] >= 1 && a[i] <= 6)
+            {
+                md[a[i]]++;
+                if (md[a[i]] == 1)
+                    cnt++;
+                break;
+            }
+        }
+        
+    }
+    cout << "In der Eingabe kamen " << cnt << " unterschiedliche Zahlen vor.\n";
+}
+
+void Solve()
+{
+}
+
+int main()
+{
+    Init();
+    Solve();
+    system("PAUSE");
+    return 0;
+}
